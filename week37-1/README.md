@@ -8,11 +8,11 @@
 
 `docker-compose up -d`
 
-`docker exec -it week37-1_ph3-posseapp-app_1 bash`
+`docker-compose exec ph3-posseapp-app bash`
 
 - appコンテナ内
 
-(/var/www/html# は打ち込まないです。コマンド実行場所をわかりやすくするためです)
+( #以降のコマンドを実行してください )
 
 `/var/www/html# composer install`
 
@@ -26,15 +26,16 @@
 
 HomeControllerにusersテーブルのgenerationカラムが1のユーザー郡を取得する処理があります
 
-whereで絞り込みをしているのでカスタムスコープでfirstGenerationメソッドを作成して差し替えてください
+同様の処理をModelクラスにメソッド（カスタムスコープ）を作成して、差し替えてください
 
 ### 修正箇所
 
-`src/app/Models/User.php` にローカルスコープを作成
+`src/app/Models/User.php` にメソッド（ローカルスコープ）を作成
 
-`src/app/Http/Controllers/HomeController.php:13` で作成したローカルスコープを利用
-
+`src/app/Http/Controllers/HomeController.php:13` Userモデルに作成したメソッドを利用
 
 ### 終了条件
 
-ローカルスコープを利用してる状態で http://localhost/ に遷移してユーザーカード一覧が表示される
+- http://localhost/ に遷移してユーザーカード一覧が表示される
+- ローカルスコープのメソッドを利用している
+
