@@ -8,11 +8,11 @@
 
 `docker-compose up -d`
 
-`docker exec -it week37-2_ph3-posseapp-app_1 bash`
+`docker-compose exec ph3-posseapp-app bash`
 
 - appコンテナ内
 
-(/var/www/html# は打ち込まないです。コマンド実行場所をわかりやすくするためです)
+(#以降のコマンドを入力してください)
 
 `/var/www/html# composer install`
 
