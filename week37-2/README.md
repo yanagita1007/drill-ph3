@@ -19,26 +19,19 @@
 `/var/www/html# php artisan migrate:refresh --seed`
 
 - ブラウザ
-  - マイグレーション、シーディングを完了後に、http://localhost/ に遷移(ログイン画面にリダイレクトする)
-  - email: test+1@posse-ap.com, pw: password でログインしてください
+  - マイグレーション、シーディングを完了後に、http://localhost/ に遷移
 
 ## 問題
 
-home.blade.phpの32行目で出力しているfull name (フルネーム) は「first_name + スペース + family_name」の形で表現されています
+home.blade.phpの32行目で出力しているfull name (フルネーム) をカスタムアクセサを利用した形に直してください
 
-フルネームの様なよく使ったりする項目は `$user->full_name` の形で扱えると扱いやすくなりそうです
-
-Userモデルにアクセサを定義して `$user->full_name` として利用できるようにし、home.blade.phpで実際に利用してフルネームがちゃんと表示されることを確認してください
+カスタムアクセサはModels/Userに定義してあります
 
 ### 修正箇所
 
-`src/app/Models/User.php` にアクセサ?、カスタムアクセサ?を作成
-
-`src/resources/views/home.blade.php:32` でアクセサ?、カスタムアクセサ?を利用
+`src/resources/views/home.blade.php:32` でカスタムアクセサを利用
 
 
 ### 終了条件
 
-アクセサ?、カスタムアクセサ?を利用してる状態で http://localhost/ に遷移してユーザーカード一覧が表示される
-
-フルネームがちゃんと「first_name + スペース + family_name」で表示されていること
+カスタムアクセサを利用してる状態で http://localhost/ に遷移してユーザーカード一覧が表示される

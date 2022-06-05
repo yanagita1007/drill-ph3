@@ -63,6 +63,16 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    /**
+     * 姓名をスペースつなぎで返す
+     *
+     * @return string
+     */
+    public function getFullNameAttribute(): string
+    {
+        return $this->first_name . ' ' . $this->family_name;
+    }
+
     public function getData()
     {
         return $this->id . ': ' . $this->family_name . ' ' . $this->first_name . ' (' . $this->email . ') [' . $this->generation . ']';

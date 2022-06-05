@@ -18,10 +18,10 @@ Route::get('/error', function () {
     return view('error');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
-Route::middleware(['auth:sanctum', 'verified'])->post('/', [HomeController::class, 'post']);
+Route::post('/', [HomeController::class, 'post']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
