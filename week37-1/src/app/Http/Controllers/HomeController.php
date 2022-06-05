@@ -11,7 +11,6 @@ class HomeController extends Controller
     {
         // generationが1のuser郡を取得
         $users = User::where('generation', 1)->get();
-
         return view('home', compact('users'));
     }
 
