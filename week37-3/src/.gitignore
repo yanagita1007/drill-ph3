@@ -1,0 +1,4 @@
+.DS_Store
+.history
+/vendor
+/node_modules
