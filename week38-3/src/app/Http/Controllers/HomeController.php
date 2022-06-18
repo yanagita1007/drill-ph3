@@ -14,6 +14,10 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        Carbon::setTestNow('2022-01-31 00:00:00');
+        // generationが1のuser郡を取得
+        $users = User::where('generation', 1)->get();
+        // 翌月の月末を想定
         $now = Carbon::now()->addMonth();
         return view('home', compact('users', 'now'));
     }
