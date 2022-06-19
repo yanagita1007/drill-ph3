@@ -41,5 +41,7 @@
 
 - `php artisan list` でide-helperの項目がコマンド一覧に追加されていることを確認
 
+![Sample Image](sample.png)
+
 - +α問題
   - `php artisan ide-helper:models` を実行すると各モデルにテーブルのカラム分の`@property`が追加されることを確認
