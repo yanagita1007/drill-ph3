@@ -35,11 +35,11 @@ src/app/Models/User.php の 14行目の上に添付する PHPDoc を追加
 
 ```php
 /**
- * @property string $first_name
+ * @property string $first_name 名前
  */
 ```
 
-HomeController 18行目のコメントを解除してfirst_nameが補完されるかどうか
+HomeController 18行目のコメントを解除してfirst_nameが補完されるかどうか (firsぐらいまで打たないと候補でないかもです)
 
 ![Sample Image](sample.png)
 
