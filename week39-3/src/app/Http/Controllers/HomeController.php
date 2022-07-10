@@ -34,9 +34,4 @@ class HomeController extends Controller
 
         return 'some' . $value;
     }
-
-    public function incrementNumber(int $value): int
-    {
-        return ++$value;
-    }
 }
