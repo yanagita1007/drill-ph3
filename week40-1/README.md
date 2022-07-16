@@ -38,6 +38,8 @@ web.php 17行目 のアクションの指定を正しい形に直してくださ
 
 ### 終了条件
 
-- [localhost/login](http://localhost/login) に遷移して添付するフォームが表示されること
+- web.phpを修正後に`php artisan optimize` or `php artisan route:cache` を実行してください
+
+- [localhost/login](http://localhost/login) に遷移して添付するフォームイメージと同じフォームが表示されること
 
 ![Success Image](sampleSuccess.png)
