@@ -34,6 +34,8 @@ week42では `/quizzes` で同期的にクイズの並び替えをしようと�
 
 quiz/index.blade.php 58行目 で利用している `querySelector` を `querySelectorAll` に変更したら全てのボタンで期待する動きができそうです
 
+※ `querySelectorAll` に差し替えただけじゃ動かないので注意してください
+
 ### 終了条件
 
 - 2行目以降の `↑` のボタンを押下して `/quizzes/up` に遷移してddの画面が表示されること
