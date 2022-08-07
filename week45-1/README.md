@@ -44,4 +44,4 @@ https://coinbaby8.com/carbon-laravel.html
 - `php artisan migrate:refresh --seed`
 - `php artisan tinker` で対話モード
 - `DB::table('study_hours_posts')->select('study_date')->get()->pluck('study_date');` を実行
-- サンプルと同じような20日前までの日付が羅列されること[sample](sample.png)
+- サンプルと同じような20日前までの日付が羅列されること![sample](sample.png)
