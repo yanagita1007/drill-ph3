@@ -2,7 +2,7 @@
 version: "3.8"
 services:
   ph3-posseapp-web:
-    platform: linux/x86_64
+    platform: linux/amd64
     build:
       context: ./container/web
     volumes:
@@ -11,16 +11,14 @@ services:
       - 80:80
 
   ph3-posseapp-app:
-    platform: linux/x86_64
+    platform: linux/amd64
     build:
       context: ./container/app
     volumes:
       - ./src:/var/www/html
 
   ph3-posseapp-db:
-    platform: linux/x86_64
-    build:
-      context: ./container/db
+    platform: linux/amd64
     environment:
       - MYSQL_DATABASE=laravel
       - MYSQL_ROOT_PASSWORD=password
