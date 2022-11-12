@@ -1,4 +1,3 @@
-
 version: "3.8"
 services:
   ph3-posseapp-web:
@@ -19,13 +18,15 @@ services:
 
   ph3-posseapp-db:
     platform: linux/amd64
-    build:
-      context: ./container/db
+    image: mysql:8.0
     environment:
-      - MYSQL_DATABASE=laravel
       - MYSQL_ROOT_PASSWORD=password
     ports:
       - 3306:3306
+    volumes:
+      - ./container/db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./container/db/etc/mysql/conf.d:/etc/mysql/conf.d
+      - ./container/db/data:/var/lib/mysql
 
   node:
     image: node:16
