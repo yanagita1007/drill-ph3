@@ -4,11 +4,11 @@
 
 以下手順で環境の立ち上げをお願いします。(※ 10分 ~ 15分 かかります)
 
-`docker-compose build --no-cache`
+`docker compose build --no-cache`
 
-`docker-compose up -d`
+`docker compose up -d`
 
-`docker-compose exec ph3-posseapp-app bash`
+`docker compose exec ph3-posseapp-app bash`
 
 - appコンテナ内
 
@@ -35,7 +35,7 @@ PHPではPHPDocとは別に引数や関数の返り値に型を指定するこ�
 
 ### 修正箇所
 
-`docker-compose exec ph3-posseapp-app bash`
+`docker compose exec ph3-posseapp-app bash`
 
 HomeController:29 ~ 36 行目を参考にHomeControllerにincrementNumberという関数を作成してください
 

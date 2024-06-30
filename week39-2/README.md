@@ -4,11 +4,11 @@
 
 以下手順で環境の立ち上げをお願いします。(※ 10分 ~ 15分 かかります)
 
-`docker-compose build --no-cache`
+`docker compose build --no-cache`
 
-`docker-compose up -d`
+`docker compose up -d`
 
-`docker-compose exec ph3-posseapp-app bash`
+`docker compose exec ph3-posseapp-app bash`
 
 - appコンテナ内
 
@@ -33,7 +33,7 @@
 
 ### 修正箇所
 
-`docker-compose exec ph3-posseapp-app bash`
+`docker compose exec ph3-posseapp-app bash`
 
 [Installation](https://github.com/barryvdh/laravel-ide-helper#installation) に記述してあるコマンドをコンテナ内で実行
 
