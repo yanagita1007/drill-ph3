@@ -18,7 +18,9 @@ class HomeController extends Controller
         // generationが1のuser郡を取得
         $users = User::where('generation', 1)->get();
         // 翌月の月末を想定
-        $now = Carbon::now()->addMonth();
+        // 翌月の月末を00:00:00で表示
+        // 翌月の月末を想定
+        $now = Carbon::now()->addMonthsNoOverflow(1)->endOfMonth()->startOfDay();
         return view('home', compact('users', 'now'));
     }
 
