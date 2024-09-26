@@ -12,8 +12,12 @@ class HomeController extends Controller
     {
         // generationが1のuser郡を取得
         $users = User::where('generation', 1)->get();
-        Session::put('home', 1);
-        $sessionHome = Session::get('home');
+        
+        // Session::putをsessionヘルパーに置き換え
+        session(['home' => 1]);
+        // Session::getをsessionヘルパーに置き換え
+        $sessionHome = session('home');
+
         dd($sessionHome);
         return view('home', compact('users'));
     }
