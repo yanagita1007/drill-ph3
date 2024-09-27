@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         $users = User::where('generation', 1)->get();
         $user = new User();
-        // $user->
+        $user->first_name
 
         $now = Carbon::now();
         return view('home', compact('users', 'now'));

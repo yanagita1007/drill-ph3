@@ -10,6 +10,15 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+     * @property string $first_name 名前
+     * @property string $family_name_hira 苗字（ひらがな）
+     * @property string $first_name_hira 名前（ひらがな）
+     * @property string $email メールアドレス
+     * @property string $password パスワード
+     * @property int $generation 世代
+ */
+
 class User extends Authenticatable
 {
     use HasApiTokens;
