@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         $users = User::where('generation', 1)->get();
         $now = Carbon::now();
-        // dd($this->incrementNumber(null));
+        //dd($this->incrementNumber(null));
         dd($this->incrementNumber(1));
         return view('home', compact('users', 'now'));
     }
@@ -33,5 +33,10 @@ class HomeController extends Controller
         }
 
         return 'some' . $value;
+    }
+
+    public function incrementNumber(int $number): int
+    {
+        return ++$number;
     }
 }
