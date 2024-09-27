@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', 'HomeController@index');
 
-Route::resource('users', 'UserController');
+Route::resource('users', 'UserController')->only(['index']);
