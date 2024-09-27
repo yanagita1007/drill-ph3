@@ -31,7 +31,6 @@ class HomeController extends Controller
         if (is_null($value)) {
             return '';
         }
-
         return 'some' . $value;
     }
 
