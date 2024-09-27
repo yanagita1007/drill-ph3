@@ -55,7 +55,10 @@
     formElement.submit();
   };
 
-  document.querySelector('.js-up-button').addEventListener('click', upToSortNumber);
+  const upButtons = document.querySelectorAll('.js-up-button');
+    upButtons.forEach(button => {
+    button.addEventListener('click', upToSortNumber);
+  });
 }
 </script>
 @endsection
